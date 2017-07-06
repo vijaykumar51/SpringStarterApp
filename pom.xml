@@ -5,7 +5,7 @@
   <groupId>com</groupId>
   <artifactId>SpringStarterApp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>SpringStarterApp</name>
   <url>http://maven.apache.org</url>
@@ -13,6 +13,18 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <build>
+	  <plugins>
+	 	<plugin>            
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-war-plugin</artifactId>
+		  <configuration>
+		    <webXml>WebContent\WEB-INF\web.xml</webXml>        
+		  </configuration>
+		</plugin>
+	  </plugins>
+  </build>
 
   <dependencies>
     <dependency>
